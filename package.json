@@ -8,7 +8,8 @@
     "start": "tsx src/index.ts",
     "start:dev": "tsx watch src/index.ts",
     "build": "tsup src --format cjs,esm --dts --minify --clean --legacy-output dist/index.js",
-    "test": "vitest --coverage --verbose --watch"
+    "test": "vitest --coverage --verbose --watch",
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
@@ -22,6 +23,7 @@
     "tsup": "^6.7.0",
     "tsx": "^3.12.7",
     "typescript": "^5.0.4",
+    "prettier": "^2.8.8",
     "vitest": "^0.31.0"
   },
   "dependencies": {

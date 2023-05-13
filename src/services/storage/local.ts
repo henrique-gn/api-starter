@@ -1,12 +1,12 @@
-import multer from "multer"
-import path from "path"
+import multer from 'multer'
+import path from 'path'
 
 const localStorage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, path.resolve(__dirname, "..", "", "..", "uploads"))
+    cb(null, path.resolve(__dirname, '..', '', '..', 'uploads'))
   },
   filename: (req, file, cb) => {
-    const [name, ext] = file.originalname.split(".")
+    const [name, ext] = file.originalname.split('.')
     const url = `${Date.now()}.${ext}`
     req.body.fileUrl = url
     cb(null, url)
