@@ -15,3 +15,7 @@ export function startApp() {
   const port = process.env.PORT || 3000
   createApp().listen(port, () => console.log('Server started on port', port))
 }
+
+export function getTestingModule() {
+  return createApp()
+}
